@@ -32,9 +32,12 @@ public abstract class onEntityDeathMixin {
         LivingEntity _this = (LivingEntity) (Object) this;
 
         String type = _this.getType().toString();
-        type = type.substring(type.lastIndexOf('.') + 1);
 
 //        System.out.println(type);
+
+        type = type.substring(type.lastIndexOf('.') + 1);
+
+//        assert type != null;
 
         if (attacker instanceof PlayerEntity playerEntity) {
             Team _team = attacker.getScoreboardTeam();
